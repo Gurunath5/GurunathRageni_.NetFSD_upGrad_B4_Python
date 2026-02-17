@@ -1,0 +1,50 @@
+<!--Gurunath Rageni-->
+
+<!--Problem -1 DAY-2 Hands on-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details</title>
+</head>
+<body>
+
+    <nav>
+        <a href="validateforms.html">Home</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Registration Form</h1>
+
+    <form action="success.html">
+
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label for="course">Select Course:</label><br>
+        <input type="text" id="course" name="course" list="courses" placeholder="Choose or type a course" required>
+
+        <datalist id="courses">
+            <option value="Python">
+            <option value="Java">
+            <option value="C Sharp">
+            <option value="Data Science">
+        </datalist><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
