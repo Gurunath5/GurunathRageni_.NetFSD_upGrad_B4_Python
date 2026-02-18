@@ -1,70 +1,41 @@
-<!-- Gurunath Rageni -->
-<!-- Problem 1 - Student Registration Form (Level-1) -->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Registration Form</title>
+    <title>Styled Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Student Registration Form</h1>
-    <section class="section1">
+    <header>
+        <h1>Student Registration</h1>
+        <p>Apply styling using external CSS</p>
+    </header>
 
-       <form action="#" method="post">
+    <section class="form-section">
 
-              <!-- Name -->
-              <div class="div">
-                     <label for="name">Full Name:</label><br>
-                     <input type="text" id="name" name="name" 
-                            placeholder="Enter your full name" 
-                            required>
-                     <br><br>
-              </div>
+        <div class="box-model-demo">
+            This div demonstrates margin and padding.
+        </div>
 
-              <!-- Email -->
-               <div class="div">
-                     <label for="email">Email:</label><br>
-                     <input type="email" id="email" name="email" 
-                            placeholder="your@gmail.com" 
-                            required>
-                     <br><br>
-              </div>
+        <form>
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name">
 
-              <!-- Phone -->
-              <div class="div">
-                     <label for="phone">Phone Number:</label><br>
-                     <input type="tel" id="phone" name="phone" 
-                            placeholder="10-digit mobile number"
-                            pattern="[0-9]{10}" 
-                            required>
-                     <br><br>
-              </div>
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email">
 
-              <!-- Age -->
-              <div class="div">
-              <label for="age">Age:</label><br>
-              <input type="number" id="age" name="age" 
-                     min="18" max="60" 
-                     required>
-              <br><br>
-              </div>
+            <label>Course:</label>
+            <select>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </select>
 
-              <!-- Date of Birth -->
-              <div class="div">
-                     <label for="dob">Date of Birth:</label><br>
-                     <input type="date" id="dob" name="dob" 
-                            required>
-                     <br><br>
-              </div>
+            <br><br>
 
-              <!-- Submit Button -->
-              <div class="button">
-              <input type="submit" value="Register">
-              </div>
+            <input type="submit" value="Register">
+        </form>
 
-       </form>
     </section>
 
 </body>

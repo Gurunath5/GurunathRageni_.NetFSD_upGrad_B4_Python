@@ -1,0 +1,45 @@
+/* Element Selector */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+
+/* Class Selector */
+.features {
+    width: 400px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Descendant Selector */
+.features h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* List Styling */
+.features ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+/* Feature Items */
+.features ul li {
+    background-color: #ffffff;
+    color: #333;
+
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 12px;
+
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.features ul li:hover {
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+}

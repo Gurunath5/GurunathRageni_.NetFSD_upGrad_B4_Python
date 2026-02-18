@@ -1,0 +1,93 @@
+/* Reset basic spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Blog Container - FLEXBOX */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Blog Card */
+.blog-card {
+    background-color: white;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    flex: 1 1 45%; /* Flexible width */
+}
+
+/* Card Typography */
+.blog-card h2 {
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
+}
+
+.blog-card p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Button */
+.blog-card button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.blog-card button:hover {
+    background-color: #1f6fb2;
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
+/* Mobile (default) = 1 column */
+.blog-card {
+    flex: 1 1 100%;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .blog-card {
+        flex: 1 1 48%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .blog-card {
+        flex: 1 1 30%;
+    }
+}

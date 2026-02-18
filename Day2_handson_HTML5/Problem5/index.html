@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Enrollment Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Online Course Enrollment</h1>
+        <p>Fill in the details to enroll in your preferred course</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Enrollment Form</h2>
+
+            <form>
+
+                <!-- Name -->
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+
+                <!-- Email -->
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <!-- Course with Datalist -->
+                <label for="course">Select Course:</label><br>
+                <input list="course-options" id="course" name="course" required>
+
+                <datalist id="course-options">
+                    <option value="HTML Fundamentals">
+                    <option value="CSS Mastery">
+                    <option value="JavaScript Basics">
+                    <option value="Python Programming">
+                    <option value="Data Structures & Algorithms">
+                </datalist>
+                <br><br>
+
+                <!-- Number Input -->
+                <label for="experience">Years of Experience:</label><br>
+                <input type="number" id="experience" name="experience" min="0" max="20" required>
+                <br><br>
+
+                <!-- Skill Level Meter -->
+                <label for="skill">Skill Level (Beginner to Advanced):</label><br>
+                <meter id="skill" min="0" max="100" value="60"
+                       low="30" high="80" optimum="90">
+                    60 out of 100
+                </meter>
+                <br><br>
+
+                <!-- Range Input -->
+                <label for="commitment">Weekly Study Commitment (Hours):</label><br>
+                <input type="range" id="commitment" name="commitment"
+                       min="1" max="40" value="10">
+                <br><br>
+
+                <!-- Progress Bar (Static) -->
+                <label>Enrollment Completion Progress:</label><br>
+                <progress value="70" max="100">70%</progress>
+                <br><br>
+
+                <!-- Submit -->
+                <button type="submit">Enroll Now</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Online Learning Platform</p>
+    </footer>
+
+</body>
+</html>
