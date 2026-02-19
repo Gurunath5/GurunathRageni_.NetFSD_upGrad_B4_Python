@@ -1,0 +1,43 @@
+.body{
+    background-color: rgb(24, 132, 227);
+}
+.ok{
+    text-align: center;
+    width: 400px;
+    margin: 40px auto;
+
+}
+.ok ul{
+    list-style-type:None;
+}
+.ok ul li{
+    background-color: bisque;
+    padding: 20px;
+    border: 1px solid;
+    color: black;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.ok ul li:hover{
+    cursor: pointer;
+    color: rgb(241, 241, 241);
+    background-color: black;
+}
+.btn{
+    color: brown;
+    padding: 20px;
+    width: 100px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: bisque;
+    margin-left: 50px;
+}
+.btn:hover{
+    cursor: pointer;
+    color: chocolate;
+    background-color: aliceblue;
+}
+.ok h1{
+    color: coral;
+    margin-left: 50px;
+}

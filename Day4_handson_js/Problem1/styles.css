@@ -1,0 +1,59 @@
+/* Desktop Styles (Default) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(30, 30, 32);
+    color: white;
+    padding: 20px;
+}
+
+/* Flexbox Navigation */
+nav {
+    display: flex;             /* Enable flexbox */
+    justify-content: center;      /* Center horizontally */
+    gap: 20px;                    /* Space between items */
+    background-color: rgb(139, 149, 155);
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+section {
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/* Mobile Styles */
+
+@media (max-width: 600px) {
+
+    /* Change background */
+    body {
+        background-color: rgb(206, 74, 18);
+    }
+
+    /* Adjust font size */
+    header h1 {
+        font-size: 22px;
+    }
+
+    section {
+        font-size: 14px;
+    }
+
+    /* Convert to vertical layout */
+    nav {
+        flex-direction:column;
+        align-items: center;      /* Center items */
+    }
+}

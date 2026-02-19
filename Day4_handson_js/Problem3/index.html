@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Discount Calculator</title>
+</head>
+<body>
+    <h1>Discount Calculator</h1>
+
+<script>
+    let amount =Number(prompt("Enter amount"))
+    let discount = 0;
+    if (amount >= 5000) {
+        discount = amount * 0.20;   
+    }else if (amount >= 3000) {
+        discount = amount * 0.10;    
+    }else {
+        discount = 0;   
+    }
+    console.log("Purchase Amount: " + amount);
+    console.log("Discount: " + discount);
+    console.log("Final Payable Amount: " +(amount-discount));
+
+</script>
+
+</body>
+</html>

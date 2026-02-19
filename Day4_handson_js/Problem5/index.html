@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Analysis Tool</title>
+</head>
+<body>
+    <h1>Number Analysis</h1>
+
+<script>
+
+    // Store number in a variable
+    let number = Number(prompt("Enter number"));
+    let result = (number > 0) ? "Positive" : "Negative";
+    console.log("Number Type: " + result);
+
+    if (number % 2 === 0) {
+        console.log("Parity: Even Number");
+    } else {
+        console.log("Parity: Odd Number");
+    }
+
+    console.log("Numbers from 1 to " + number + ":");
+
+    for (let i = 1; i <= number; i++) {
+        console.log(i);
+    }
+
+</script>
+
+</body>
+</html>
