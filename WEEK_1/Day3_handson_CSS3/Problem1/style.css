@@ -2,20 +2,17 @@
 * {
     font-family: Arial, sans-serif;
 }
-
 /* Element Selector */
 h1 {
     color: darkblue;
     text-align: center;
 }
-
 /* Paragraph Styling */
 p {
     text-align: center;
     font-style: italic;
     color: gray;
 }
-
 /* Section Styling */
 .form-section {
     background-color: #f2f2f2;
@@ -24,7 +21,6 @@ p {
     width: 50%;
     margin: 20px auto;
 }
-
 /* Box Model Demonstration */
 .box-model-demo {
     background-color: lightblue;
@@ -33,12 +29,10 @@ p {
     margin: 20px;    /* Outside spacing */
     text-align: center;
 }
-
 /* Form Styling */
 form {
     margin-top: 20px;
 }
-
 /* Input Styling */
 input, select {
     width: 100%;
@@ -48,14 +42,12 @@ input, select {
     border: 1px solid gray;
     border-radius: 4px;
 }
-
 /* Submit Button Styling */
 input[type="submit"] {
     background-color: darkblue;
     color: white;
     cursor: pointer;
 }
-
 input[type="submit"]:hover {
     background-color: green;
 }
