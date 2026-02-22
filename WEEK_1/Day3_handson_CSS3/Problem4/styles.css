@@ -29,7 +29,7 @@ header h1 {
 .blog-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 4rem;
     padding: 2rem;
 }
 
