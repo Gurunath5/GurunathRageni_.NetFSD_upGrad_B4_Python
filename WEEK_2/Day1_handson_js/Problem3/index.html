@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location-Based Weather Logger</title>
+</head>
+<body>
+
+    <h2>Location Logger</h2>
+
+    <button onclick="getLocation()">Get My Location</button>
+
+    <h3>Current Location</h3>
+    <p id="output"></p>
+    <p id="error" style="color:red;"></p>
+
+    <h3>Last 5 Locations</h3>
+    <ul id="historyList"></ul>
+
+<script>
+
+// Load history when page loads
+window.onload = function () {
+    displayHistory();
+};
+
+function getLocation() {
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            successCallback,
+            errorCallback,
+            { timeout: 10000 }
+        );
+    } else {
+        document.getElementById("error").innerText =
+            "Geolocation is not supported by this browser.";
+    }
+}
+
+//  SUCCESS CALLBACK
+function successCallback(position) {
+
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+
+    document.getElementById("output").innerText =
+        "Latitude: " + latitude + 
+        " | Longitude: " + longitude;
+
+    document.getElementById("error").innerText = "";
+
+    let locationData = {
+        latitude: latitude,
+        longitude: longitude,
+        time: new Date().toLocaleString()
+    };
+
+    saveLocation(locationData);
+}
+
+//  ERROR CALLBACK
+function errorCallback(error) {
+
+    let message = "";
+
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            message = "Permission Denied by user.";
+            break;
+        case error.TIMEOUT:
+            message = "Location request timed out.";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            message = "Location information unavailable.";
+            break;
+        default:
+            message = "Unknown error occurred.";
+    }
+
+    document.getElementById("error").innerText = message;
+}
+
+//  Save last 5 locations
+function saveLocation(newLocation) {
+
+    let locations = JSON.parse(localStorage.getItem("locations")) || [];
+
+    locations.unshift(newLocation); // Add newest at top
+
+    if (locations.length > 5) {
+        locations.pop(); // Remove oldest
+    }
+
+    localStorage.setItem("locations", JSON.stringify(locations));
+
+    displayHistory();
+}
+//  Display history
+function displayHistory() {
+
+    let locations = JSON.parse(localStorage.getItem("locations")) || [];
+
+    let list = document.getElementById("historyList");
+    list.innerHTML = "";
+
+    locations.forEach(function (loc) {
+        let li = document.createElement("li");
+        li.innerText = 
+            "Lat: " + loc.latitude + 
+            " | Lon: " + loc.longitude + 
+            " | Time: " + loc.time;
+        list.appendChild(li);
+    });
+}
+</script>
+</body>
+</html>

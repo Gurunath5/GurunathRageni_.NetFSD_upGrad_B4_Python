@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+</head>
+<body>
+
+<h2>Counter App</h2>
+
+<p id="counterValue">0</p>
+
+<button id="incrementBtn">Increment</button>
+<button id="resetBtn">Reset</button>
+
+<script>
+
+// Global variable (outside functions)
+var counter = 0;
+
+// Function to increment counter
+function incrementCounter(step) {
+    counter += step;
+    document.getElementById("counterValue").innerText = counter;
+}
+
+// Function to reset counter
+function resetCounter() {
+    counter = 0;
+    document.getElementById("counterValue").innerText = counter;
+}
+
+// Event listeners (No inline JS)
+document.getElementById("incrementBtn").addEventListener("click", function() {
+    incrementCounter(1);  // Passing step value as parameter
+});
+
+document.getElementById("resetBtn").addEventListener("click", resetCounter);
+
+</script>
+
+</body>
+</html>
