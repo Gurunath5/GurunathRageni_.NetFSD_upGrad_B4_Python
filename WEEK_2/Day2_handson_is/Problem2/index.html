@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cart</title>
+</head>
+<body>
+<script type="module">
+    import { generateInvoice } from "./cart.js";
+    const cart = [
+        { name: "Laptop", price: 50000, quantity: 1 },
+        { name: "Headphones", price: 2000, quantity: 2 },
+        { name: "Mouse", price: 500, quantity: 3 }
+    ];
+    console.log(generateInvoice(cart));
+</script>
+</body>
+</html>

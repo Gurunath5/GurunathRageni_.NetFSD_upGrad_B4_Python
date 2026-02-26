@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>feedback</title>
+        <link rel="styleSheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Feedback</h2>
+            <textarea id="feedbackText" rows="2" cols="30" placeholder="Enter feedback here..."></textarea>
+            <br><br>
+            <button id="fbtn">Submit Feedback</button>
+            <p id="message" class="msg"></p>
+        </div>
+        <script>
+            const button = document.getElementById("fbtn");
+            button.addEventListener('click', function() {
+                const textBox = document.getElementById("feedbackText");
+                const message=document.getElementById("message")
+
+                if (textBox.value.trim() === "") {
+                    document.getElementById("message").innerText = "Please enter feedback";
+                    message.style.color='red';
+                    return;
+                }
+                document.getElementById("message").innerText = "Thanks for your feedback";
+                message.style.color='green';
+            
+                textBox.value = "";      
+                button.disabled = true;
+                });
+        </script>
+    </body>
+</html>

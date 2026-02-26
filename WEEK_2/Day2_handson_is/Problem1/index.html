@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h2>Student Marks Analysis</h2>
+    <div id="output"></div>
+
+    <script>
+        const studentMarks = [80, 92, 68, 99, 85];
+
+        const calculateTotal = (marks) =>
+            marks.reduce((total, mark) => total + mark, 0);
+
+        const calculateAverage = (marks) =>
+            calculateTotal(marks) / marks.length;
+
+        const getResult = (average) =>
+            average >= 40 ? "Pass " : "Fail ";
+
+        const analyzeMarks = (marks) => {
+            const total = calculateTotal(marks);
+            const average = calculateAverage(marks);
+            const result = getResult(average);
+            // Print inside browser pageusing template literals.
+            document.getElementById("output").innerHTML = `
+                <p><strong>Marks:</strong> ${marks.join(", ")}</p>
+                <p><strong>Total:</strong> ${total}</p>
+                <p><strong>Average:</strong> ${average.toFixed(2)}</p>
+                <p><strong>Result:</strong> ${result}</p>
+            `;
+        };
+        analyzeMarks(studentMarks);
+    </script>
+
+</body>
+</html>

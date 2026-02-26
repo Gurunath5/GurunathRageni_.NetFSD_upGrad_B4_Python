@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>todo</title>
+</head>
+<body>
+
+    <h2>Todo list</h2>
+
+    <input type="text" id="taskinput" placeholder="enter task">
+    <button id="addbutton">Enter</button>
+    <ul id="tasklist"></ul>
+
+    <script>
+
+        const taskinputt = document.getElementById("taskinput");
+        const addbuttonn = document.getElementById("addbutton");
+        const tasklistt = document.getElementById("tasklist");
+
+        // Add Task
+        addbuttonn.addEventListener('click', function(){
+
+            if(taskinputt.value.trim() === ""){
+                alert("please enter a task");
+                return;
+            }
+
+            const li = document.createElement("li");
+
+            li.innerHTML = `
+                <span class="task-text">${taskinputt.value}</span>
+                <div class="btn-group">
+                    <button class="complete-btn">Done</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            `;
+
+            tasklistt.appendChild(li);
+            taskinputt.value = '';
+        });
+
+        // Event Delegation
+        tasklistt.addEventListener('click', function(e){
+
+            const delbtn = e.target.closest('.delete-btn');
+            const cmpbtn = e.target.closest('.complete-btn');
+
+            if(delbtn){
+                delbtn.closest('li').remove();
+            }
+
+            if(cmpbtn){
+                cmpbtn.closest('li').classList.toggle('completed');
+            }
+        });
+
+    </script>
+
+</body>
+</html>

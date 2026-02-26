@@ -1,0 +1,34 @@
+<input type="text" id="city" placeholder="Enter city">
+<button onclick="fetchWeather()">Get Weather</button>
+<div id="result"></div>
+
+<script>
+const apiKey = "YOUR_API_KEY";
+
+const fetchWeather = async () => {
+  const city = document.getElementById("city").value;
+  const resultDiv = document.getElementById("result");
+
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+    );
+
+    if (!response.ok) {
+      throw new Error("City not found!");
+    }
+
+    const data = await response.json();
+
+    resultDiv.innerHTML = `
+      <h3>${data.name}</h3>
+      <p>🌡 Temp: ${data.main.temp}°C</p>
+      <p>☁ Weather: ${data.weather[0].description}</p>
+      <p>💨 Wind: ${data.wind.speed} m/s</p>
+    `;
+
+  } catch (error) {
+    resultDiv.innerHTML = `<p style="color:red;">${error.message}</p>`;
+  }
+};
+</script>
