@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback Form</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h2>Student Feedback Form</h2>
+
+    <form id="feedbackForm">
+        <label>Name:</label><br>
+        <input type="text" id="name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label>Course Rating:</label><br>
+        <select id="rating">
+            <option value="">Select Rating</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Average">Average</option>
+        </select><br><br>
+
+        <label>Comments:</label><br>
+        <textarea id="comments"></textarea><br><br>
+
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <!-- Message Area -->
+    <div id="message"></div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#feedbackForm").submit(function(event){
+
+                event.preventDefault(); // prevent page reload
+
+                // Get input values using jQuery
+                let name = $("#name").val().trim();
+                let email = $("#email").val().trim();
+
+                // Validation
+                if(name === "" || email === ""){
+                    $("#message")
+                        .html("<p style='color:red;'>Please enter both Name and Email.</p>");
+                } 
+                else {
+                    $("#message")
+                        .html("<p style='color:green;'>Thank you for your feedback!</p>");
+
+                    // Clear form fields
+                    $("#feedbackForm")[0].reset();
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

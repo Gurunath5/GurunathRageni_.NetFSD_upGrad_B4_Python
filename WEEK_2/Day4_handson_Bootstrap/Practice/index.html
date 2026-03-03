@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API</title>
+</head>
+<body>
+    <button id="btn">Fetch API</button>
+    <div id="result"></div>
+
+    <script>
+        //async api
+        async function fetchdatafromapi(){
+            const fetchdata=await fetch('https://jsonplaceholder.typicode.com/posts/1');
+            if(!fetchdata.ok){
+                throw new Error("error happens")
+            }
+            const data=await fetchdata.json();
+            return data;
+        }
+
+        async function handlefetchdata(){
+            const resulttext=document.getElementById('result')
+            resulttext.innerText="Fetching data..."
+
+            try{
+                const data=await fetchdatafromapi();
+                resulttext.innerText=`Result:${data.title}`;
+            }catch(error){
+                resulttext.innerText='An error occured'+error.message;
+            }
+        }
+        document.getElementById('btn').addEventListener('click',handlefetchdata);
+    </script>
+</body>
+</html>

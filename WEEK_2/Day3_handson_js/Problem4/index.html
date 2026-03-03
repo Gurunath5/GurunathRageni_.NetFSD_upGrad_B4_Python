@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Product Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        .product {
+            padding: 10px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product:hover {
+            background: #eaeaea;
+        }
+
+        .no-result {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Mini Product Search</h2>
+
+    <input type="text" id="searchInput" placeholder="Search products...">
+
+    <div id="productList"></div>
+
+    <script>
+        /* =========================
+           MODULE: Product Data
+        ========================== */
+        const ProductModule = (() => {
+
+            const products = [
+                { id: 1, name: "Laptop" },
+                { id: 2, name: "Smartphone" },
+                { id: 3, name: "Headphones" },
+                { id: 4, name: "Smart Watch" },
+                { id: 5, name: "Keyboard" },
+                { id: 6, name: "Mouse" }
+            ];
+
+            let state = [...products]; // State Management
+
+            const getProducts = () => state;
+
+            const filterProducts = (keyword) => {
+                state = products.filter(product =>
+                    product.name.toLowerCase().includes(keyword.toLowerCase())
+                );
+                return state;
+            };
+
+            return { getProducts, filterProducts };
+
+        })();
+
+
+        /* =========================
+           MODULE: UI Controller
+        ========================== */
+        const UIModule = (() => {
+
+            const productList = document.getElementById("productList");
+
+            const renderProducts = (items) => {
+
+                productList.innerHTML = "";
+
+                if (items.length === 0) {
+                    productList.innerHTML =
+                        `<p class="no-result">No Results Found</p>`;
+                    return;
+                }
+
+                items.forEach(product => {
+                    const div = document.createElement("div");
+                    div.classList.add("product");
+                    div.dataset.id = product.id;
+                    div.textContent = product.name;
+                    productList.appendChild(div);
+                });
+            };
+
+            return { renderProducts };
+
+        })();
+
+
+        /* =========================
+           MODULE: App Controller
+        ========================== */
+        const App = (() => {
+
+            const searchInput = document.getElementById("searchInput");
+            const productList = document.getElementById("productList");
+
+            const init = () => {
+                UIModule.renderProducts(ProductModule.getProducts());
+                bindEvents();
+            };
+
+            const bindEvents = () => {
+
+                // Real-time filtering
+                searchInput.addEventListener("input", (e) => {
+                    const filtered =
+                        ProductModule.filterProducts(e.target.value);
+                    UIModule.renderProducts(filtered);
+                });
+
+                // Event Delegation (Single listener for all products)
+                productList.addEventListener("click", (e) => {
+                    if (e.target.classList.contains("product")) {
+                        alert("Clicked: " + e.target.textContent);
+                    }
+                });
+            };
+
+            return { init };
+
+        })();
+
+        // Initialize App
+        App.init();
+
+    </script>
+
+</body>
+</html>

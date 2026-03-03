@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Toggle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .question {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            background: #007bff;
+            color: white;
+        }
+
+        .question.active {
+            background: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-container">
+
+    <div class="faq-item">
+        <div class="question">What is your return policy?</div>
+        <div class="answer">You can return products within 30 days of purchase.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">Do you offer international shipping?</div>
+        <div class="answer">Yes, we ship to selected countries worldwide.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">How can I track my order?</div>
+        <div class="answer">You will receive a tracking link via email after dispatch.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">What payment methods are accepted?</div>
+        <div class="answer">We accept credit cards, debit cards, and UPI.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">How can I contact support?</div>
+        <div class="answer">You can contact us via email or phone support.</div>
+    </div>
+
+</div>
+
+<script>
+$(document).ready(function () {
+
+    $(".question").click(function () {
+
+        // Close other answers
+        $(".answer").not($(this).next()).slideUp();
+        $(".question").not($(this)).removeClass("active");
+
+        // Toggle clicked answer
+        $(this).next(".answer").slideToggle();
+
+        // Highlight active question
+        $(this).toggleClass("active");
+
+    });
+
+});
+</script>
+
+</body>
+</html>

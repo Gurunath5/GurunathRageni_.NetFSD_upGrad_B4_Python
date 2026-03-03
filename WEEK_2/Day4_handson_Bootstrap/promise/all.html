@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //map
+            let a=[1,2,3,4,50]
+            let b=a.map(x=>x+5);
+            console.log(b);
+
+            //reduce
+            let redu=a.reduce((x,y)=>x+y,0);
+            console.log(redu);
+
+            //filter
+            let fil=a.filter(x=>x%2===0)
+            console.log(fil);
+
+            //find
+            let fin=a.find(x=>x%2===0);
+            console.log(fin);
+
+            //for each
+            a.forEach((number,ind)=>console.log(number,ind))
+
+            //for of
+            for(let value of a){
+                console.log(value);
+            }
+            const obj={
+                name:"Gurunath",
+                age:24,
+            }
+            for(key in obj){
+                console.log(key,obj[key])
+            }
+
+            //spread
+            let x=[...a]
+            function spread(a,b,c){
+                return a+b+c
+            }
+            console.log(spread(...[1,2,3]))
+
+            //rest
+
+            function hii(...numbers){
+                console.log(numbers)
+            }
+            hii(1,2,3,4)
+
+            //destructuring
+
+            let [aa,bb,...rest]=a;
+            console.log(rest);
+
+            //structuredclone
+
+            let y=structuredClone(a);
+            y[0]=10
+            console.log(a,y)
+
+            
+            a.push(1000);
+            console.log(a)
+            a.pop()
+            console.log(a);
+
+            for(let i=0;i<a.length;i++){
+                console.log(a[i]);
+            }
+
+            //class
+
+            class guru{
+                constructor(name,age){
+                    this.name=name
+                    this.age=age
+                }
+                greet(){
+                    console.log("hii "+this.name)
+                }
+            }
+            let c1=new guru("Gurunath",24)
+            c1.greet()
+
+
+            //inheritance
+
+            class animal{
+                constructor(name){
+                    this.name=name
+                }
+                sound(){
+                    console.log(this.name+" Makes sound")
+                }
+            }
+            class dog extends animal{
+                bark(){
+                    console.log(this.name+"  Sounds")
+                }
+            }
+            let obj1=new dog('Dog')
+            obj1.sound()
+            obj1.bark()
+        </script>
+    </body>
+</html>

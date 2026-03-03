@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopElite - E-Commerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* ===== Custom Theme Variables ===== */
+        :root {
+            --bs-primary: #4e73df;
+            --bs-secondary: #f6c23e;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            color: white;
+            padding: 120px 0;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">ShopElite</a>
+
+        <!-- Offcanvas Toggle -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="collapse navbar-collapse d-none d-lg-flex">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= OFFCANVAS MENU ================= -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ================= HERO SECTION ================= -->
+<section id="home" class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Upgrade Your Tech Today</h1>
+        <p class="lead">Premium gadgets at unbeatable prices</p>
+        <a href="#products" class="btn btn-light btn-lg mt-3">Shop Now</a>
+    </div>
+</section>
+
+<!-- ================= CAROUSEL ================= -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Featured Products</h2>
+
+        <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active text-center">
+                    <img src="https://via.placeholder.com/400x250" class="d-block mx-auto img-fluid">
+                    <h5 class="mt-3">Gaming Laptop</h5>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img src="https://via.placeholder.com/400x250" class="d-block mx-auto img-fluid">
+                    <h5 class="mt-3">Smart Watch</h5>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img src="https://via.placeholder.com/400x250" class="d-block mx-auto img-fluid">
+                    <h5 class="mt-3">Wireless Headphones</h5>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#featuredCarousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#featuredCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PRODUCT GRID ================= -->
+<section id="products" class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-5">Latest Products</h2>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Laptop</h5>
+                        <p class="card-text">$999</p>
+                        <button class="btn btn-primary mt-auto">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Smartphone</h5>
+                        <p class="card-text">$699</p>
+                        <button class="btn btn-primary mt-auto">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Tablet</h5>
+                        <p class="card-text">$499</p>
+                        <button class="btn btn-primary mt-auto">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Camera</h5>
+                        <p class="card-text">$799</p>
+                        <button class="btn btn-primary mt-auto">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<section id="newsletter" class="section-padding bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+
+        <form class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <input type="email" class="form-control mb-3" placeholder="Enter your email" required>
+                <button class="btn btn-secondary w-100">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center">
+    <div class="container">
+        <p class="mb-0">© 2026 ShopElite | All Rights Reserved</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

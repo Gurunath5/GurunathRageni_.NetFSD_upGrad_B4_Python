@@ -1,0 +1,41 @@
+<!-- Promise Sample -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Sample</title>
+</head>
+<body>
+    <h1>Promise Sample</h1>
+    <script>
+        // Creating a new Promise
+        let myPromise = new Promise(function(resolve, reject) {
+            // Simulating an asynchronous operation using setTimeout
+            setTimeout(function() {
+                let success = true; // Change this to false to test rejection
+                if (success) {
+                    resolve("The operation was successful!");
+                } else {
+                    reject("The operation failed.");
+                }
+            }, 2000);
+        });
+        // Handling the resolved value of the Promise
+        myPromise.then(function(result) {
+            console.log(result); // Output: The operation was successful!
+        }).catch(function(error) {
+            console.error(error); // Output: The operation failed.
+        });
+    </script>
+</body>
+</html>
+
+
+a=[1,2,3,4,5,6]
+for(let value of a){
+    if(value===5){
+        Console.log(5);
+    }
+}

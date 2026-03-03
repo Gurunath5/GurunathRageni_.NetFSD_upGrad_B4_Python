@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //callback
+            function greet(name,callback){
+                console.log("hii"+name);
+                callback()
+            }
+            function welcome(){
+                console.log("ok callback function works")
+            }
+            greet("Gurunath",welcome);
+        </script>
+    </body>
+</html>
