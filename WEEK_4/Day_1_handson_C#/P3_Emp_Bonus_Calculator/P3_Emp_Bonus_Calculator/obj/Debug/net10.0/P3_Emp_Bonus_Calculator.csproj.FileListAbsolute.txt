@@ -1,0 +1,14 @@
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\bin\Debug\net10.0\P3_Emp_Bonus_Calculator.exe
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\bin\Debug\net10.0\P3_Emp_Bonus_Calculator.deps.json
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\bin\Debug\net10.0\P3_Emp_Bonus_Calculator.runtimeconfig.json
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\bin\Debug\net10.0\P3_Emp_Bonus_Calculator.dll
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\bin\Debug\net10.0\P3_Emp_Bonus_Calculator.pdb
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\P3_Emp_Bonus_Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\P3_Emp_Bonus_Calculator.AssemblyInfoInputs.cache
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\P3_Emp_Bonus_Calculator.AssemblyInfo.cs
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\P3_Emp_Bonus_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\P3_Emp_Bonus_Calculator.dll
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\refint\P3_Emp_Bonus_Calculator.dll
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\P3_Emp_Bonus_Calculator.pdb
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\P3_Emp_Bonus_Calculator.genruntimeconfig.cache
+C:\Users\gurun\P3_Emp_Bonus_Calculator\P3_Emp_Bonus_Calculator\obj\Debug\net10.0\ref\P3_Emp_Bonus_Calculator.dll

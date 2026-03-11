@@ -1,0 +1,14 @@
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\bin\Debug\net10.0\Day1_p1_Studentgrades.exe
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\bin\Debug\net10.0\Day1_p1_Studentgrades.deps.json
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\bin\Debug\net10.0\Day1_p1_Studentgrades.runtimeconfig.json
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\bin\Debug\net10.0\Day1_p1_Studentgrades.dll
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\bin\Debug\net10.0\Day1_p1_Studentgrades.pdb
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\Day1_p1_Studentgrades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\Day1_p1_Studentgrades.AssemblyInfoInputs.cache
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\Day1_p1_Studentgrades.AssemblyInfo.cs
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\Day1_p1_Studentgrades.csproj.CoreCompileInputs.cache
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\Day1_p1_Studentgrades.dll
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\refint\Day1_p1_Studentgrades.dll
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\Day1_p1_Studentgrades.pdb
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\Day1_p1_Studentgrades.genruntimeconfig.cache
+C:\Users\gurun\Day1_p1_Studentgrades\Day1_p1_Studentgrades\obj\Debug\net10.0\ref\Day1_p1_Studentgrades.dll

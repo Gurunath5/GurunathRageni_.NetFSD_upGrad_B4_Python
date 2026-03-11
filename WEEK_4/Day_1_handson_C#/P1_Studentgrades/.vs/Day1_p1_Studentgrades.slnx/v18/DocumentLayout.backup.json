@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gurun\\Day1_p1_Studentgrades\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{123E10F0-9CC3-43C9-AC20-E3BE20A14718}|Day1_p1_Studentgrades\\Day1_p1_Studentgrades.csproj|c:\\users\\gurun\\day1_p1_studentgrades\\day1_p1_studentgrades\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{123E10F0-9CC3-43C9-AC20-E3BE20A14718}|Day1_p1_Studentgrades\\Day1_p1_Studentgrades.csproj|solutionrelative:day1_p1_studentgrades\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gurun\\Day1_p1_Studentgrades\\Day1_p1_Studentgrades\\Program.cs",
+              "RelativeDocumentMoniker": "Day1_p1_Studentgrades\\Program.cs",
+              "ToolTip": "C:\\Users\\gurun\\Day1_p1_Studentgrades\\Day1_p1_Studentgrades\\Program.cs*",
+              "RelativeToolTip": "Day1_p1_Studentgrades\\Program.cs*",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T12:50:21.937Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
