@@ -27,7 +27,6 @@ Sample Output: Final Price after 5% discount = 19000*/
 
 
 using System;
-
 namespace ShoppingCart
 {
     // Base Class
@@ -42,7 +41,6 @@ namespace ShoppingCart
             get { return name; }
             set { name = value; }
         }
-
         // Property for Price with validation
         public double Price
         {
@@ -84,7 +82,6 @@ namespace ShoppingCart
             return Price - (Price * 0.15);
         }
     }
-
     class Program
     {
         static void Main(string[] args)

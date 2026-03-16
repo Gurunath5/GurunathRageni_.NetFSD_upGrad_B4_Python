@@ -1,4 +1,26 @@
-﻿using System;
+﻿/*Level-1 Problem 2: Simple Calculator Using Switch
+Scenario
+Create a simple calculator application that performs basic arithmetic operations.
+Requirements
+• Accept two numbers from user.
+• Accept operator (+, -, *, /).
+• Use switch statement to perform operation.
+• Display result.
+Technical Constraints
+• Use int or double data types.
+• Use switch-case statement.
+• Handle division by zero.
+Sample Input
+Enter First Number: 10
+Enter Second Number: 5
+Enter Operator: *
+Sample Output
+Result: 50
+Expectations
+Correct operator selection and proper validation of inputs.
+Learning Outcome
+Understand switch statements, arithmetic operators and control flow in C#.*/
+using System;
 
 namespace Day_1
 {

@@ -68,11 +68,9 @@ namespace StackUndoSystem
                         Console.WriteLine("Nothing to Undo (Stack Empty)");
                         return;
                     }
-
                     Console.WriteLine("Undo: " + stack[top]);
                     top--;
                 }
-
                 // Display current state
                 void Display()
                 {
@@ -81,7 +79,6 @@ namespace StackUndoSystem
                         Console.WriteLine("Editor Empty");
                         return;
                     }
-
                     Console.Write("Current State: ");
                     for (int i = 0; i <= top; i++)
                     {
