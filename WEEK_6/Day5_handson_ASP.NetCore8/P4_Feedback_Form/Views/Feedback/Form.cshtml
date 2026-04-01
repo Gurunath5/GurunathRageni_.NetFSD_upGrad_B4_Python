@@ -1,0 +1,27 @@
+﻿<h2>Feedback Form</h2>
+
+<form method="post" action="/feedback/submit">
+    Name: <input type="text" name="Name" required /><br /><br />
+
+    Comments:<br />
+    <textarea name="Comments" required></textarea><br /><br />
+
+    Rating:
+    <select name="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br /><br />
+
+    <button type="submit">Submit</button>
+</form>
+
+<br />
+
+@if (ViewData["Message"] != null)
+{
+    <h3>@ViewData["Message"]</h3>
+}

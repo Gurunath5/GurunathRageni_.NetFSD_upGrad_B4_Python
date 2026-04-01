@@ -1,0 +1,51 @@
+﻿@model List<Contact_Management.Models.ContactInfo>
+
+<h2>Contact List</h2>
+
+<a href="/Contact/AddContact" class="btn btn-primary">Add New Contact</a>
+
+<form asp-action="SearchById" method="post" class="mb-3">
+    <div class="row">
+        <div class="col-md-4">
+            <input type="number" name="id" class="form-control" placeholder="Enter Contact ID" required />
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color:red;">@ViewBag.Message</p>
+}
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Designation</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.ContactId</td>
+                <td>@c.FirstName @c.LastName</td>
+                <td>@c.CompanyName</td>
+                <td>@c.EmailId</td>
+                <td>@c.MobileNo</td>
+                <td>@c.Designation</td>
+                <td>
+                    <a href="/Contact/GetContactById/@c.ContactId" class="btn btn-info">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

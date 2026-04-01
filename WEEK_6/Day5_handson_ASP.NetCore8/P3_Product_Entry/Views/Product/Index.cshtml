@@ -1,0 +1,37 @@
+﻿<h2>Product Entry</h2>
+
+<form method="post" action="/product/add">
+    Name: <input type="text" name="Name" required /><br /><br />
+    Price: <input type="number" name="Price" required /><br /><br />
+    Quantity: <input type="number" name="Quantity" required /><br /><br />
+    <button type="submit">Add Product</button>
+</form>
+
+<hr />
+
+<h3>Product List</h3>
+
+@if (ViewBag.Products != null && ViewBag.Products.Count > 0)
+{
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+
+        @foreach (var p in ViewBag.Products)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+                <td>@p.Quantity</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No products added yet.</p>
+}
+}
