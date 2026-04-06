@@ -1,0 +1,12 @@
+﻿@model ContactInfo
+
+<h2>Edit Contact</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ContactId" />
+
+    <!-- Same fields as Create -->
+    <!-- reuse same design -->
+
+    <button type="submit" class="btn btn-warning">Update</button>
+</form>

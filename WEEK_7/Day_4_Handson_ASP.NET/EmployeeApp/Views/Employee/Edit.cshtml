@@ -1,0 +1,25 @@
+﻿@model Employee
+
+<h2>Edit Employee</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <label>Name:</label><br />
+    <input asp-for="Name" /><br /><br />
+
+    <label>Department:</label><br />
+    <input asp-for="Department" /><br /><br />
+
+    <label>Salary:</label><br />
+    <input asp-for="Salary" type="number" /><br /><br />
+
+    <label>Hire Date:</label><br />
+    <input asp-for="HireDate" type="date" /><br /><br />
+
+    <button type="submit">Update</button>
+
+</form>
+
+<a asp-action="Index">Back to List</a>

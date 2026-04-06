@@ -1,0 +1,53 @@
+﻿@model ContactInfo
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <h2>Add Contact</h2>
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <!-- VALIDATION SUMMARY -->
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="mb-2">
+            <input asp-for="FirstName" class="form-control" placeholder="First Name" />
+        </div>
+
+        <div class="mb-2">
+            <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+        </div>
+
+        <div class="mb-2">
+            <input asp-for="EmailId" class="form-control" placeholder="Email" />
+        </div>
+
+        <div class="mb-2">
+            <input asp-for="MobileNo" class="form-control" placeholder="Mobile" />
+        </div>
+
+        <div class="mb-2">
+            <input asp-for="Designation" class="form-control" placeholder="Designation" />
+        </div>
+
+        <div class="mb-2">
+            <select asp-for="CompanyId" asp-items="ViewBag.Companies" class="form-control">
+                <option value="">-- Select Company --</option>
+            </select>
+        </div>
+
+        <div class="mb-2">
+            <select asp-for="DepartmentId" asp-items="ViewBag.Departments" class="form-control">
+                <option value="">-- Select Department --</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

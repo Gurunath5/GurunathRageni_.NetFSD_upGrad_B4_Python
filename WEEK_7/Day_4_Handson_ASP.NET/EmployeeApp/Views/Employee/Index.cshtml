@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Employee>
+
+<h2>Employee List</h2>
+
+<!-- SEARCH -->
+<form asp-action="Search">
+    <input type="text" name="name" placeholder="Search name" />
+    <button type="submit">Search</button>
+</form>
+
+<!-- FILTER -->
+<form asp-action="Filter">
+    <select name="dept">
+        <option>HR</option>
+        <option>IT</option>
+        <option>Finance</option>
+    </select>
+    <button type="submit">Filter</button>
+</form>
+
+<!-- SORT -->
+<a asp-action="Sort" asp-route-asc="true">Salary ↑</a> |
+<a asp-action="Sort" asp-route-asc="false">Salary ↓</a>
+
+<br />
+<br />
+
+<a asp-action="Create">Add Employee</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Date</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Department</td>
+            <td>@item.Salary</td>
+            <td>@item.HireDate.ToShortDateString()</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<br />
+
+<a asp-action="Count">Total</a> |
+<a asp-action="HighestSalary">Highest Salary</a> |
+<a asp-action="GroupByDept">Group By Dept</a>
